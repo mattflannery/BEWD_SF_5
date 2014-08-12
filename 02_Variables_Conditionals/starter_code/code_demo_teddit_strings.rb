@@ -13,9 +13,29 @@
 #Version 1 - Welcome the user to Teddit, print the first story to the terminal.
 ###########
 ###########
-#
-#'Welcome to Teddit! a text based news aggregator. Get today\'s news tomorrow!'
-#'Story: Man raised by wolverines, then eaten Current upvotes: 4'
+
+
+
+puts "Story: Man raised by wolverines, then eaten Current upvotes: 4 \n"
+story = "Cat makes fortune by showing elderly how to play dice"
+upvotes = 4
+
+puts "Story: " + story + "Current upvotes " + upvotes.to_s + "\n"
+
+
+def put_welcome
+	puts "Welcome to Teddit! a text based news aggregator. Get today\'s news tomorrow!\n"
+end
+
+put_welcome
+
+
+def story_stats (x , y)
+	puts "Story: #{x.capitalize}\nCurrent upvotes #{y}"
+end
+
+story_stats story , upvotes 
+
 
 
 #Version 2 - Replace the story title and upvotes with variables.
