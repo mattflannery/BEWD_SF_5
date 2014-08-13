@@ -27,7 +27,7 @@ def calculate_upvotes(story, category)
 	topic_array = [["cats",5], ["bacon",8], ["food",3]]
 
 	topic_array.each do |(x, y)|
-		x= x.downcase
+		x = x.downcase
 		story = story.downcase
 		category = category.downcase
 
