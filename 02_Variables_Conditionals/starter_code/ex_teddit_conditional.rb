@@ -6,7 +6,8 @@
 
 def get_input
   #Get input from the user.
-  gets
+  input = gets
+  input.strip
 end
 
 def calculate_upvotes(story, category)
@@ -21,14 +22,14 @@ def calculate_upvotes(story, category)
 	#For example:
 	# "Cats frolic despite tuna shortage" should give you 5 times the upvotes!
 
-	upvotes = 0;
+	upvotes = 0
 
 	topic_array = [["cats",5], ["bacon",8], ["food",3]]
 
 	topic_array.each do |(x, y)|
-		x.downcase
-		story.downcase
-		category.downcase
+		x= x.downcase
+		story = story.downcase
+		category = category.downcase
 
 		if (story.include? x) || (category.include? x )
 			if upvotes == 0
@@ -46,4 +47,4 @@ story = get_input
 puts "Please give it a category:"
 category = get_input
 upvotes = calculate_upvotes(story, category)
-puts "New story added! #{story}Category: #{category.capitalize}Current Upvotes: #{upvotes}"
+puts "New story added!\n#{story}\nCategory: #{category.capitalize}\nCurrent Upvotes: #{upvotes}"
